@@ -48,10 +48,105 @@ function activeWork() {
 }
 linkWork.forEach((l) => l.addEventListener("click", activeWork));
 /*=============== RESUME ===============*/
+const accordionItems = document.querySelectorAll(".resume-item");
+accordionItems.forEach((item) => {
+  const header = item.querySelector(".resume-header");
+  const content = item.querySelector(".resume-content");
+  const icon = item.querySelector(".resume-icon i");
 
+  header.addEventListener("click", () => {
+    const isOpen = item.classList.toggle("accordion-open");
+
+    content.style.height = isOpen ? content.scrollHeight + "px" : "0";
+    icon.className = isOpen ? "ri-subtract-line" : "ri-add-line";
+
+    accordionItems.forEach((otherItem) => {
+      if (
+        otherItem !== item &&
+        otherItem.classList.contains("accordion-open")
+      ) {
+        otherItem.querySelector(".resume-content").style.height = "0";
+        otherItem.querySelector(".resume-icon i").classList = "ri-add-line";
+        otherItem.classList.remove("accordion-open");
+      }
+    });
+  });
+});
 /*=============== TESTIMONIALS SWIPER ===============*/
-
+var servicesSwiper = new Swiper(".testimonials-swiper", {
+  spaceBetween: 32,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1208: {
+      slidesPerView: 3,
+    },
+  },
+});
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById("contact-form"),
+  contactName = document.getElementById("contact-name"),
+  contactEmail = document.getElementById("contact-email"),
+  contactSubject = document.getElementById("contact-subject"),
+  contactMessage = document.getElementById("contact-message"),
+  message = document.getElementById("message");
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  if (
+    contactName.value === "" ||
+    contactMessage.value === "" ||
+    contactSubject.value === "" ||
+    contactEmail.value === ""
+  ) {
+    message.classList.add("color-red");
+    message.textContent = "Write all the input fields";
+
+    setTimeout(() => {
+      message.textContent = "";
+    }, 3000);
+  } else {
+    var templateParams = {
+      name: contactName.value,
+      email: contactEmail.value,
+      subject: contactSubject.value,
+      message: contactMessage.value,
+    };
+
+    emailjs
+      .sendForm(
+        "service_weu5xhs",
+        "template_fw24ewn",
+        "#contact-form",
+        "Tzm8pw0CY2rnvCBn7"
+      )
+      .then(
+        () => {
+          message.classList.add("color-first");
+          message.textContent = "Your message sent successfully ✔";
+
+          setTimeout(() => {
+            message.textContent = "";
+          }, 5000);
+        },
+        (error) => {
+          alert("OOPs! SOMETHING WENT WRONG...", error);
+        }
+      );
+    contactName.value = "";
+    contactMessage.value = "";
+    contactSubject.value = "";
+    contactEmail.value = "";
+  }
+};
+
+contactForm.addEventListener("submit", sendEmail);
 
 /*=============== STYLE SWITCHER ===============*/
 /* Variables define */
