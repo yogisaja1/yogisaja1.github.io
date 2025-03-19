@@ -22,31 +22,31 @@
   </head>
   <body>
     <!--=============== HEADER ===============-->
-    <header class="header">
+    <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav-logo">Miller</a>
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="#home" class="nav-link active-link">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Services</a>
+              <a href="#services" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Skills</a>
+              <a href="#skills" class="nav-link">Skills</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Works</a>
+              <a href="#works" class="nav-link">Works</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Resume</a>
+              <a href="#resume" class="nav-link">Resume</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Testimonials</a>
+              <a href="#testimonials" class="nav-link">Testimonials</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
           <div class="social-links">
@@ -60,6 +60,9 @@
               <i class="ri-behance-fill"></i>
             </a>
           </div>
+          <div class="section-deco deco-left header-deco">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
         <div class="nav-buttons">
           <div class="nav-settings" id="switcher-toggle">
@@ -72,7 +75,7 @@
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== HOME ===============-->
-      <section class="home section">
+      <section class="home section" id="home">
         <div class="home-container container">
           <div class="home-content">
             <h2 class="home-subtitle">Hello, <span>My Name is</span></h2>
@@ -132,10 +135,13 @@
               <a href="#" class="home-link">My Skills</a>
             </div>
           </div>
+          <div class="section-deco deco-left">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== SERVICES ===============-->
-      <section class="service section">
+      <section class="service section" id="services">
         <h2 class="section-title" data-title="My Services">
           What I <span>Do</span>
         </h2>
@@ -212,10 +218,14 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
+
+          <div class="section-deco deco-right">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== SKILLS ===============-->
-      <section class="skills section">
+      <section class="skills section" id="skills">
         <h2 class="section-title" data-title="My Talent">
           Professional <span>Skills</span>
         </h2>
@@ -298,10 +308,14 @@
               <span class="skills-percentage" style="width: 80%"> </span>
             </div>
           </div>
+
+          <div class="section-deco deco-left">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== WORK ===============-->
-      <section class="work section">
+      <section class="work section" id="works">
         <h2 class="section-title" data-title="My Cases">Portfolio</h2>
         <div class="container">
           <ul class="work-list">
@@ -396,10 +410,14 @@
               </div>
             </div>
           </div>
+
+          <div class="section-deco deco-right">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== RESUME ===============-->
-      <section class="resume section">
+      <section class="resume section" id="resume">
         <h2 class="section-title" data-title="My Story">Resume</h2>
         <div class="resume-container container grid">
           <div class="resume-group">
@@ -533,10 +551,14 @@
               </div>
             </div>
           </div>
+
+          <div class="section-deco deco-left">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== TESTIMONIALS ===============-->
-      <section class="testimonials section">
+      <section class="testimonials section" id="testimonials">
         <h2 class="section-title" data-title="My Customers Say">
           Testimonials
         </h2>
@@ -626,10 +648,13 @@
             </div>
             <div class="swiper-pagination"></div>
           </div>
+          <div class="section-deco deco-right">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
       <!--=============== CONTACT ===============-->
-      <section class="contact section">
+      <section class="contact section" id="contact">
         <h2 class="section-title" data-title="Let's Talk About Ideas">
           Contact Me
         </h2>
@@ -734,12 +759,34 @@
             </div>
             <p class="message" id="message"></p>
           </form>
+
+          <div class="section-deco deco-left">
+            <img src="assets/img/shape-1.png" alt="" class="shape" />
+          </div>
         </div>
       </section>
     </main>
 
     <!--=============== FOOTER ===============-->
-
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-socials social-links">
+          <a href="https://x.com" target="_blank" class="social-link">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a href="https://dribbble.com/" target="_blank" class="social-link">
+            <i class="ri-dribbble-fill"></i>
+          </a>
+          <a href="https://behance.com/" target="_blank" class="social-link">
+            <i class="ri-behance-fill"></i>
+          </a>
+        </div>
+        <p class="footer-copyright">
+          © 2024 <span>Miller</span>. All Rights Reserved
+        </p>
+        <p class="footer-copy">Developed by <span>Yogi</span></p>
+      </div>
+    </footer>
     <!--=============== STYLE SWITCHER ===============-->
     <div class="style-switcher" id="style-switcher">
       <h2 class="style-swicher-title">Style Switcher</h2>
