@@ -92,3 +92,15 @@ try {
     "MixItUp skipped: Portfolio grid not actively used for filtering."
   );
 }
+
+document.addEventListener(
+  "click",
+  () => {
+    const music = document.getElementById("bgMusic");
+
+    music.volume = 0.2; // volume halus
+    music.loop = true; // looping terus
+    music.play();
+  },
+  { once: true }
+);
